@@ -4,20 +4,21 @@ print("Welcome to number Guessing Game,\nyou are supposed to guess the correct n
 guess_num = int(input("Guess the number b/w 1 to 20: "))
 
 a = guess_num
-b = a
+# b = a
 i = 1
-while a != secret_number and range(i,5):
+while a True and range(i,5):
     if guess_num == secret_number :
         print(f"{guess_num} correct guess!",f"you found in {i} attempts")
         break
     elif guess_num < secret_number:
         print("Too Low",f" only {5-i} chances remaining")
         guess_num = int(input("retry with a new number : "))
-        a = b
+        # a = b
     elif guess_num > secret_number:
         print(f"Too High, only {5-i} chances left")
         guess_num = int(input("retry with a new number : "))
-        b = guess_num
+        #b = guess_num
     i+=1
 else:
     print(f"The answer was {secret_number}")
+
