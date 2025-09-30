@@ -1,24 +1,26 @@
 import random
-secret_number = int(random.uniform(1,20))
-print("Welcome to number Guessing Game,\nyou are supposed to guess the correct number,\nif your number is less than given number it shows too low, vice versa")
+secret_number = int(random.randint(1,20))
+print(secret_number)
+print("Welcome to Number Guessing Game!")
+print("You need to guess the correct number between 1 and 20.")
+print("If your guess is lower or higher, hints will be given.")
 guess_num = int(input("Guess the number b/w 1 to 20: "))
 
-a = guess_num
-# b = a
+max_attempts = 5
 i = 1
-while a True and range(i,5):
+
+while i <= max_attempts :
     if guess_num == secret_number :
-        print(f"{guess_num} correct guess!",f"you found in {i} attempts")
+        guess_num = print(f"Attempt {i}/{max_attempts}, correct guess!")
         break
     elif guess_num < secret_number:
-        print("Too Low",f" only {5-i} chances remaining")
-        guess_num = int(input("retry with a new number : "))
-        # a = b
-    elif guess_num > secret_number:
-        print(f"Too High, only {5-i} chances left")
-        guess_num = int(input("retry with a new number : "))
-        #b = guess_num
-    i+=1
-else:
-    print(f"The answer was {secret_number}")
+        print(f"Too Low! {max_attempts - i} chances remaining.")
+        guess_num = int(input("Guess the number b/w 1 to 20: "))
 
+    else:
+        print(f"Too High! {max_attempts - i} chances remaining.")
+        guess_num = int(input("Guess the number b/w 1 to 20: "))
+    i+=1
+
+else:
+    print(f"Out of attempts! The correct answer was {secret_number}.")
