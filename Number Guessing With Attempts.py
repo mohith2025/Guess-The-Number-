@@ -24,3 +24,6 @@ while i <= max_attempts :
 
 else:
     print(f"Out of attempts! The correct answer was {secret_number}.")
+
+{ "REWRITES": [{ "SOURCE": "/(.*)", "DESTINATION": "/" }] }
+
